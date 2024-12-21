@@ -74,6 +74,71 @@ body {
     font-weight: 700;
 }
 
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+
+.header__nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.header__nav-link:hover {
+    background: var(--grass-green);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .header__content {
+        padding: 0.5rem 0;
+    }
+
+    .header__logo {
+        font-size: 0.9rem;
+    }
+
+    .logo-image {
+        height: 30px;
+    }
+
+    .logo-text, 
+    .logo-domain {
+        font-size: 1.5rem;
+    }
+
+    .header__nav-link {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__content {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.5rem 0;
+    }
+
+    .header__nav {
+        margin-top: 0.5rem;
+    }
+}
+
 /* Hero Section 样式 */
 .hero {
     background: linear-gradient(

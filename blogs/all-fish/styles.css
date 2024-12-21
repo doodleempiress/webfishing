@@ -1,0 +1,312 @@
+/* 博客文章样式 */
+.blog-post {
+    padding: 4rem 0;
+    background: linear-gradient(
+        135deg,
+        rgba(45, 90, 39, 0.05),
+        rgba(117, 207, 240, 0.1)
+    );
+}
+
+/* 文章头部样式 */
+.blog-post__header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.blog-post__title {
+    font-size: 3rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.blog-post__meta {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.blog-post__cover {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post__cover-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 文章内容样式 */
+.blog-post__content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post__content h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin: 2.5rem 0 1.5rem;
+}
+
+.blog-post__content h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin: 2rem 0 1rem;
+}
+
+.blog-post__content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.blog-post__content img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+/* 文章底部样式 */
+.blog-post__footer {
+    max-width: 800px;
+    margin: 3rem auto 0;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.blog-post__tags {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.blog-post__tag {
+    padding: 0.5rem 1rem;
+    background: var(--grass-green);
+    color: white;
+    border-radius: 50px;
+    font-size: 0.9rem;
+}
+
+/* 相关文章样式 */
+.related-posts {
+    padding: 4rem 0;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.related-posts__title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.related-posts__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .blog-post {
+        padding: 2rem 0;
+    }
+
+    .blog-post__title {
+        font-size: 2rem;
+    }
+
+    .blog-post__content {
+        padding: 1.5rem;
+    }
+
+    .blog-post__content h2 {
+        font-size: 1.75rem;
+    }
+
+    .blog-post__content h3 {
+        font-size: 1.35rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-post__meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .blog-post__content {
+        padding: 1rem;
+    }
+}
+
+/* 表格容器样式 */
+.table-container {
+    margin: 2rem 0;
+    overflow-x: auto;
+}
+
+/* 表格基础样式 */
+.fish-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* 表头样式 */
+.fish-table thead {
+    background: var(--grass-green);
+    color: white;
+}
+
+.fish-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+/* 表格内容样式 */
+.fish-table td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* 隔行变色 */
+.fish-table tbody tr:nth-child(even) {
+    background: rgba(46, 204, 113, 0.05);
+}
+
+/* 鼠标悬停效果 */
+.fish-table tbody tr:hover {
+    background: rgba(46, 204, 113, 0.1);
+}
+
+/* Tier 列样式 */
+.fish-table td:last-child {
+    text-align: center;
+    font-weight: 600;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .fish-table th,
+    .fish-table td {
+        padding: 0.6rem;
+    }
+}
+
+/* 在现有样式后添加 */
+
+.introduction {
+    margin-bottom: 3rem;
+}
+
+.introduction ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.introduction li {
+    margin: 0.5rem 0;
+}
+
+.pro-tip {
+    background: rgba(241, 196, 15, 0.1);
+    border-left: 4px solid var(--accent-color);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.pro-tip h3 {
+    color: var(--accent-color);
+    margin-top: 0;
+}
+
+.ufo-guide {
+    margin-top: 4rem;
+    padding: 2rem;
+    background: rgba(74, 144, 226, 0.1);
+    border-radius: 20px;
+}
+
+.ufo-guide h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.ufo-guide ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.ufo-guide li {
+    margin: 0.5rem 0;
+}
+
+/* 面包屑导航样式 */
+.breadcrumb {
+    background-color: var(--light-bg);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.875rem;
+}
+
+.breadcrumb__item {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb__link {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb__link:hover {
+    color: var(--accent-color);
+}
+
+.breadcrumb__separator {
+    margin: 0 0.5rem;
+    color: var(--text-light);
+}
+
+.breadcrumb__current {
+    color: var(--text-light);
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .breadcrumb {
+        padding: 0.25rem 0;
+    }
+    
+    .breadcrumb__list {
+        font-size: 0.75rem;
+    }
+}
